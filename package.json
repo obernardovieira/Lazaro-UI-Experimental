@@ -1,22 +1,23 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "lazaro",
+  "version": "0.0.1",
+  "description": "Connection manager",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "lazaro",
+    "connection",
+    "manager"
   ],
-  "author": "GitHub",
+  "author": "obernardovieira",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "js-treeview": "^1.1.5"
   }
 }
