@@ -18,7 +18,7 @@ module.exports = {
         mainWindow.on('closed', function () {
             mainWindow = null
         })
-        cmd.run('gnome-terminal')
-        TreeView.hello()
+        //cmd.run('gnome-terminal')
+        TreeView.hello('{ "root": ["John Doe","You"]}')
     }
 }
