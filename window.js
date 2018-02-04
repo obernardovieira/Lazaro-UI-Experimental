@@ -2,6 +2,7 @@ const electron = require('electron')
 const path = require('path')
 const url = require('url')
 const cmd = require('node-cmd')
+const TreeView = require('./treeview.js');
 
 module.exports = {
 
@@ -18,5 +19,6 @@ module.exports = {
             mainWindow = null
         })
         cmd.run('gnome-terminal')
+        TreeView.hello()
     }
 }
