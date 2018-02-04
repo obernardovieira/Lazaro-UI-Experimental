@@ -18,7 +18,8 @@ module.exports = {
         mainWindow.on('closed', function () {
             mainWindow = null
         })
-        //cmd.run('gnome-terminal')
-        TreeView.hello('{ "root": ["John Doe","You"]}')
+        cmd.run('gnome-terminal')
+        var treeView = new TreeView()
+        var treeSet = treeView.build('[{"name" : "Test", "type" : "group", "elements" : [{"name" : "John Doe"}]}, {"name" : "You", "type" : "element"}]')
     }
 }

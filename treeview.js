@@ -1,23 +1,33 @@
 var util = require('util')
 
-function buildHeaderGroup() {
-    // TODO: stuff
+function buildHeaderGroup(element) {
+    var nElements = element['elements'].length
+    var buildedGroup = "<tr><td>" + element['name'] + "</td><td>1</td>"
+    for(var i = 0; i < nElements; i++) {
+        buildedGroup += buildElementGroup(element['elements'][i])  
+    }
+    buildedGroup += "</tr>"
+    return buildedGroup
 }
 
-function buildElementGroup() {
-    // TODO: stuff
+function buildElementGroup(element) {
+    return "<tr><td>" + element['name'] + "</td><td>1</td></tr>"
 }
 
 function TreeView() { }
 
-TreeView.hello = function(jsonString) {
+TreeView.prototype.build = function(jsonString) {
     var jsonObj = JSON.parse(jsonString)
-    var rootElement = jsonObj['root']
-    console.log(jsonObj['root'] instanceof Array)
-    var nElements = rootElement.length;
+    var nElements = jsonObj.length;
+    var buildedTable = ""
     for(var i = 0; i < nElements; i++) {
-        console.log(rootElement[i])
+        if(jsonObj[i]['type'] == 'group') {
+            buildedTable += buildHeaderGroup(jsonObj[i])
+        } else {
+            buildedTable += buildElementGroup(jsonObj[i])
+        }
     }
+    return buildedTable
 };
 
 module.exports = TreeView;
