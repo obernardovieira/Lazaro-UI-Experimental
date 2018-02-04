@@ -1,6 +1,7 @@
 const electron = require('electron')
 const path = require('path')
 const url = require('url')
+const cmd = require('node-cmd')
 
 module.exports = {
 
@@ -16,5 +17,6 @@ module.exports = {
         mainWindow.on('closed', function () {
             mainWindow = null
         })
+        cmd.run('gnome-terminal')
     }
 }
