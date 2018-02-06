@@ -1,4 +1,4 @@
-var util = require('util')
+function TreeView() { }
 
 function buildHeaderGroup(element) {
     var nElements = element['elements'].length
@@ -13,8 +13,6 @@ function buildHeaderGroup(element) {
 function buildElementGroup(element) {
     return "<tr><td>" + element['name'] + "</td><td>1</td></tr>"
 }
-
-function TreeView() { }
 
 TreeView.prototype.build = function(jsonString) {
     var jsonObj = JSON.parse(jsonString)
