@@ -2,7 +2,7 @@ const electron = require('electron')
 const cmd = require('node-cmd')
 const TreeView = require('./treeview.js');
 const DataSaver = require('./datasaver')
-var {app, BrowserWindow} = electron
+var {app, BrowserWindow, dialog} = electron
 
 module.exports = {
 
@@ -12,7 +12,6 @@ module.exports = {
         mainWindow.loadURL('http://localhost:3000')
 
         //cmd.run('gnome-terminal -x sh -c \'command1; command2; exec bash\'')
-        
         
         mainWindow.on('closed', function () {
             mainWindow = null

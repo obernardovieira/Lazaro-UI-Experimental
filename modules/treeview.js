@@ -28,4 +28,8 @@ TreeView.prototype.build = function(jsonString) {
     return buildedTable
 };
 
+TreeView.whenClick = function() {
+    //
+}
+
 module.exports = TreeView;

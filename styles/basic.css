@@ -1,0 +1,7 @@
+#tree tr {
+    cursor: pointer;
+}
+
+#tree tr:hover {
+    background-color: rgba(124, 124, 124, 0.507);
+}
