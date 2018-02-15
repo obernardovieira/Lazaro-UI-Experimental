@@ -5,3 +5,7 @@
 #tree tr:hover {
     background-color: rgba(124, 124, 124, 0.507);
 }
+
+.group > td:nth-child(1) {
+    padding-left: 2em;
+}

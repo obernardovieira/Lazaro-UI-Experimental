@@ -5,11 +5,25 @@
     <title>Control</title>
 
     <link rel="stylesheet" href="styles/sakura.css" type="text/css">
-    <link rel="stylesheet" href="styles/basic.css" type="text/css">
+	<link rel="stylesheet" href="styles/basic.css" type="text/css">
+	
+	<style>
+		td {
+			border-bottom: 0px;
+		}
+	</style>
 
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <a href="/">Back</a>
+    <h1>Add new server</h1>
+	<form action="/save">
+		<table border="0px">
+			<tr><td>Name:</td><td><input type="text"></td></tr>
+			<tr><td>IP:</td><td><input type="text"></td></tr>
+			<tr><td>username:</td><td><input type="text"></td></tr>
+			<tr><td>password:</td><td><input type="password"></td></tr>
+			<tr><td><input type="submit" value="Add"></td><td><a href="/">Back</a></td></tr>
+		</table>
+    </form>
   </body>
 </html>  

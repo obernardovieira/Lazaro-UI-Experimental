@@ -2,16 +2,15 @@ function TreeView() { }
 
 function buildHeaderGroup(element) {
     var nElements = element['elements'].length
-    var buildedGroup = "<tr><td>" + element['name'] + "</td><td>1</td>"
+    var buildedGroup = "<tr><td onclick=\"clickGroupElement(this)\">" + element['name'] + "</td><td>1</td></tr>"
     for(var i = 0; i < nElements; i++) {
-        buildedGroup += buildElementGroup(element['elements'][i])  
+        buildedGroup += buildElementGroup(element['elements'][i], true)  
     }
-    buildedGroup += "</tr>"
     return buildedGroup
 }
 
-function buildElementGroup(element) {
-    return "<tr><td onclick=\"clickElement(this)\">" + element['name'] + "</td><td>1</td></tr>"
+function buildElementGroup(element, child) {
+    return "<tr" + ((child == true) ? (" class='group'") : ("")) + "><td onclick=\"clickElement(this)\">" + element['name'] + "</td><td>1</td></tr>"
 }
 
 TreeView.prototype.build = function(jsonString) {
@@ -22,7 +21,7 @@ TreeView.prototype.build = function(jsonString) {
         if(jsonObj[i]['type'] == 'group') {
             buildedTable += buildHeaderGroup(jsonObj[i])
         } else {
-            buildedTable += buildElementGroup(jsonObj[i])
+            buildedTable += buildElementGroup(jsonObj[i], false)
         }
     }
     return buildedTable
