@@ -6,6 +6,7 @@ const electron = require('electron').app
 app.set('view engine', 'ejs')
 app.use("/styles", express.static(__dirname + "/styles"))
 app.get('/', window.render)
+app.get('/control', window.control)
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
 electron.on('ready', window.create)

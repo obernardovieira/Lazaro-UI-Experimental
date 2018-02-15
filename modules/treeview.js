@@ -11,7 +11,7 @@ function buildHeaderGroup(element) {
 }
 
 function buildElementGroup(element) {
-    return "<tr><td>" + element['name'] + "</td><td>1</td></tr>"
+    return "<tr><td onclick=\"clickElement(this)\">" + element['name'] + "</td><td>1</td></tr>"
 }
 
 TreeView.prototype.build = function(jsonString) {

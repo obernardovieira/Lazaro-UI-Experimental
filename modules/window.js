@@ -22,5 +22,9 @@ module.exports = {
         var treeView = new TreeView()
         var treeSet = treeView.build(DataSaver.load())
         response.render('index', { tableTree: treeSet })
+    },
+
+    control:  function(request, response) {
+        response.render('control')
     }
 }
