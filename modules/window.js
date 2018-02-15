@@ -16,6 +16,7 @@ module.exports = {
         mainWindow.on('closed', function () {
             mainWindow = null
         })
+        mainWindow.setMenu(null);
     },
 
     render: function(request, response) {
