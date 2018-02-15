@@ -2,7 +2,7 @@ function TreeView() { }
 
 function buildHeaderGroup(element) {
     var nElements = element['elements'].length
-    var buildedGroup = "<tr><td onclick=\"clickGroupElement(this)\">" + element['name'] + "</td><td>1</td></tr>"
+    var buildedGroup = "<tr><td onclick=\"clickGroupElement(this)\">" + element['name'] + "</td><td></td></tr>"
     for(var i = 0; i < nElements; i++) {
         buildedGroup += buildElementGroup(element['elements'][i], true)  
     }
