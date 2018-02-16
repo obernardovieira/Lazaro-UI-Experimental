@@ -1,29 +1,34 @@
 <!DOCTYPE html>  
 <html lang="en">  
-  <head>
-    <meta charset="utf-8">
-    <title>Control</title>
+	<head>
+		<meta charset="utf-8">
+		<title>Control</title>
 
-    <link rel="stylesheet" href="styles/sakura.css" type="text/css">
-	<link rel="stylesheet" href="styles/basic.css" type="text/css">
-	
-	<style>
-		td {
-			border-bottom: 0px;
-		}
-	</style>
+		<link rel="stylesheet" href="styles/sakura.css" type="text/css">
+		<link rel="stylesheet" href="styles/basic.css" type="text/css">
 
-  </head>
-  <body>
-    <h1>Add new server</h1>
-	<form action="/save">
-		<table border="0px">
-			<tr><td>Name:</td><td><input type="text"></td></tr>
-			<tr><td>IP:</td><td><input type="text"></td></tr>
-			<tr><td>username:</td><td><input type="text"></td></tr>
-			<tr><td>password:</td><td><input type="password"></td></tr>
-			<tr><td><input type="submit" value="Add"></td><td><a href="/">Back</a></td></tr>
-		</table>
-    </form>
-  </body>
+		<style>
+			td {
+				border-bottom: 0px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1>Add new server</h1>
+		<!--
+			this redirects to main page with POST data
+			when in / if there is POST data will be read
+			otherwise nothing happens.
+		-->
+		<form action="/" method="POST">
+			<table border="0px">
+				<tr><td>Name:</td><td><input type="text"></td></tr>
+				<tr><td>IP:</td><td><input type="text"></td></tr>
+				<tr><td>username:</td><td><input type="text"></td></tr>
+				<tr><td>password:</td><td><input type="password"></td></tr>
+				<tr><td><input type="submit" value="Add"></td><td><a href="/">Back</a></td></tr>
+			</table>
+		</form>
+	</body>
 </html>  
