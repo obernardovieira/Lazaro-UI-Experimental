@@ -7,6 +7,22 @@
 	<link rel="stylesheet" href="styles/sakura.css" type="text/css">
 	<link rel="stylesheet" href="styles/basic.css" type="text/css">
 	<script>
+		function importFile() {
+			document.getElementById('import').click()
+		}
+		function exportFile() {
+			document.getElementById('export').click()
+		}
+		function selectFile(event) {
+			alert(event.target.files[0].path);
+			/* TODO: stuff*/
+		}
+		function selectFolder(event) {
+			alert(event.target.files[0].path);
+			/* TODO: stuff*/
+		}
+		
+		
 		function clickElement(element) {
 			element.style.backgroundColor = "red";
 		}
@@ -20,8 +36,10 @@
 		<h1>Your servers</h1>
 		<a href="/control">Add new one!</a>
 
-		<button id="export">Export</button>
-		<button id="import">Import</button>
+		<button onclick="importFile()">Import</button>
+		<input id="import" onchange="selectFile(event);" type="file" style="display: none" />
+		<button onclick="exportFile()">Export</button>
+		<input id="export" onchange="selectFolder(event);" type="file" style="display: none" webkitdirectory />
 
 		<table id="tree">
 			<thead><td>Name</td><td>Data</td></thead>
