@@ -18,6 +18,7 @@ app.set('view engine', 'ejs')
 app.use("/styles", express.static(__dirname + "/styles"))
 app.get('/', window.render)
 app.get('/new', window.new)
+app.get('/edit', window.edit)
 app.listen(3000, () => console.log('Listening on port 3000!'))
 /*
     emulate it with electron

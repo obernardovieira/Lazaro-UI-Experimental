@@ -27,9 +27,16 @@ module.exports = {
     },
 
     /*
-        render control window with express
+        render new window with express
     */
     new: function(request, response) {
         response.render('new')
+    },
+
+    /*
+        render edit window with express
+    */
+    edit: function(request, response) {
+        response.render('edit')
     }
 }
