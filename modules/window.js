@@ -29,7 +29,7 @@ module.exports = {
     /*
         render control window with express
     */
-    control: function(request, response) {
-        response.render('control')
+    new: function(request, response) {
+        response.render('new')
     }
 }
