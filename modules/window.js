@@ -37,6 +37,19 @@ module.exports = {
         render edit window with express
     */
     edit: function(request, response) {
-        response.render('edit')
+        var toEdit = request.params.server
+        DataSaver.getOne(toEdit)
+        response.render('edit', { name: 'teste' })
+    },
+
+    /*
+        render main window with express after save
+    */
+    save: function(request, response) {
+        var nameServer = request.body.name
+
+        DataSaver.addOnde(JSON.stringify({name : nameServer}))
+
+        render(request, response)
     }
 }

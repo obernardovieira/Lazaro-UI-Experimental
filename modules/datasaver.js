@@ -12,6 +12,16 @@ module.exports = {
         return '[]'
     },
 
+    getOne : function(ip) {
+        var allResults = load()
+        /* apply some filter */
+        return '[]'
+    },
+
+    addOnde: function(data) {
+
+    },
+
     save : function(dataToSave) {
         return fs.writeFileSync(os.homedir() + fileName, dataToSave, 'utf8')
     }
